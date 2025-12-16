@@ -1,0 +1,17 @@
+{
+  "name": "powersync-bucket-limit-repro",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite"
+  },
+  "dependencies": {
+    "@journeyapps/wa-sqlite": "^1.1.0",
+    "@powersync/web": "^1.30.0",
+    "jose": "^5.9.6"
+  },
+  "devDependencies": {
+    "vite": "^6.0.3",
+    "vite-plugin-wasm": "^3.4.1"
+  }
+}

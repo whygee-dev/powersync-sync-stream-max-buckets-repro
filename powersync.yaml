@@ -1,0 +1,22 @@
+replication:
+  connections:
+    - type: postgresql
+      uri: postgres://postgres:postgres@postgres:5432/postgres
+      sslmode: disable
+      slot_name: powersync_slot
+      publication_name: powersync
+
+client_auth:
+  audience: ['powersync']
+  jwks:
+    keys:
+      - kty: oct
+        k: cHJpdmF0ZV9rZXlfZm9yX3Rlc3Rpbmdfb25seQ
+        alg: HS256
+
+sync_rules:
+  path: /config/sync_rules.yaml
+
+storage:
+  type: mongodb
+  uri: mongodb://mongo:27017/powersync
