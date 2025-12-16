@@ -51,6 +51,10 @@ When connecting as `test-user-1`:
 [PSYNC_S2305] Too many parameter query results: 1800 (limit of 1000)
 ```
 
+**Note:** The same error occurs with any combination exceeding 1000 buckets:
+- 1 sync rule + 1 sync stream (600 + 600 = 1200)
+- 2 sync streams only (600 + 600 = 1200)
+
 ## What the Web App Shows
 
 The web app uses `@powersync/web` SDK and calls `db.getBucketStates()` to display:
