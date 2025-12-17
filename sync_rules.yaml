@@ -3,7 +3,7 @@ config:
 
 bucket_definitions:
   by_resource:
-    parameters: SELECT resource_id FROM user_access WHERE user_id = auth.user_id()
+    parameters: SELECT resource_id FROM user_access WHERE user_id = request.user_id()
     data:
       - SELECT * FROM resource WHERE id = bucket.resource_id
 

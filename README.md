@@ -55,13 +55,6 @@ When connecting as `test-user-1`:
 - 1 sync rule + 1 sync stream (600 + 600 = 1200)
 - 2 sync streams only (600 + 600 = 1200)
 
-## What the Web App Shows
-
-The web app uses `@powersync/web` SDK and calls `db.getBucketStates()` to display:
-- Total bucket count
-- Bucket count per stream
-- Sample bucket IDs showing the naming pattern
-
 ## Root Cause Hypothesis
 
 Bucket IDs include the source name as a prefix. Even though all sources resolve to the same underlying data (same `user_id` + `resource_id` combinations), they generate distinct buckets
